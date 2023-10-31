@@ -4,7 +4,7 @@
 
 Our algorithm is based on the smoothness prior provided by the KTC2023 organising committee [[2]](#2). We modified it to include post-processing steps, including one with a CNN, to extract meaninful information and to segment the resuts. This is our first submission to the KTC2023.
 
-A brief and visual overview of our proposal is attached in the pdf: visual_readme.pdf. It also includes examples of reconstructions from the traning set. 
+A brief and visual overview of our proposal is attached in the pdf: [A visual read me](visual_readme.pdf). It also includes examples of reconstructions from the traning set. 
 
 ## Authors
 * Roberto Gutierrez Beraldo¹* - roberto.gutierrez@ufabc.edu.br
