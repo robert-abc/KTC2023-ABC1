@@ -4,7 +4,7 @@
 
 Our algorithm is based on the smoothness prior provided by the KTC2023 organising committee [[2]](#2). We modified it to include post-processing steps, including one with a CNN, to extract meaninful information and to segment the resuts. This is our first submission to the KTC2023.
 
-A brief and visual overview of our proposal is attached in the pdf: [A visual read me](visual_readme.pdf). It also includes examples of reconstructions using data from the traning set. 
+A brief and visual overview of our proposal is attached in the [Visual read me PDF](visual_readme.pdf). It also includes examples of reconstructions using data from the traning set. 
 
 ## Authors
 * Roberto Gutierrez Beraldo¹* - roberto.gutierrez@ufabc.edu.br
@@ -22,36 +22,40 @@ A brief and visual overview of our proposal is attached in the pdf: [A visual re
 ## Proposed method installation and usage instructions
 
 ### Method installation and requirements
-* The Python codes are available in this repository, see main.py and the /utils folder.
+* The Matlab files available in this repository, see /KTC2023_Codes_1_Github folder.
+* Most files are similar or identical to the original KTC codes. The differences are:
+    * We added the CNN file ("ultimate_cnn1.h5")
+    * We modified main.m to include the post-processing steps
+    The one line code that calls main.m is the Proposal_function.m
+* We trained the CNN using Tensorflow/keras in Google Colaboratory (Colab). We did not include the python file, the code to generate the traning pairs, or the training pairs themselves here. Please, contact us if you need further information other the [Visual read me](visual_readme.pdf).
 
-* We ran our codes using Google Colaboratory (Colab), but it results in a large list of packages (obtained by pip freeze > requirements.txt) and not all of them are necessary.
-* It is possible to create an Anaconda environment "by hand" given the packages list. In the following table, there is a small list of the main packages we used (with "import").
 
 | Package | Version |
 | ------------- | ------------- |
-| Python | 3.10.11 | 
-| Numpy | 1.22.4 | 
-| Matplotlib | 3.7.1 | 
-| Scipy | 1.10.1 | 
-| Skimage | 0.19.3 |
-| Pillow | 8.4.0 | 
-| Torch | 2.0.0+cu118 | 
-| ODL | 1.0.0 | 
+| Matlab | R2023a Update 5 | 
+| Deep Learning Toolbox | 14.6 | 
+| Image Processing Toolbox | 11.7 | 
+
+### External codes
+
+* We used the function importKerasLayers from the Deep Learning Toolbox Converter for TensorFlow Models (V.23.1.0).
+    * It is necessary to download and install it from https://www.mathworks.com/matlabcentral/fileexchange/64649-deep-learning-toolbox-converter-for-tensorflow-models
+    * More info at: https://www.mathworks.com/help/deeplearning/ref/importkeraslayers.html
+    * Note that a new function importNetworkFromTensorFlow is available since Matlab R2023b, but we did not use it.
+* We based our implementation of the soft thresholding in the following function from the UNLocBoX toolbox:
+    * https://epfl-lts2.github.io/unlocbox-html/doc/utils/soft_threshold_code.html
+    * In this case, there's no need to download this toolbox or this function
+
 
 ### Usage instructions and example: Running with a callable function from the command line
 
-By the rules of the HTC 2022, it was expected a one-line command: 
+By the rules of the KTC2022, it was expected a one-line command: 
 * *Your main routine must require three input arguments:*
 1. *(string) Folder where the input image files are located*
 1. *(string) Folder where the output images must be stored*
 1. *(int) Difficulty category number. Values between 1 and 7*
-* *Python: The main function must be a callable function from the command line. 
 
-After the setup, it is possible to run our code following these rules. Considering the difficulty group 7: 
-* python main.py 'example/input' 'example/output' 7
-
-See, for instance, the Section "Generating results" from the example notebook [Here](/notebook_example.ipynb).
-
+After downloading the files from the folder \KTC2023_Codes_1_Github, ...
 
 ## References
 
