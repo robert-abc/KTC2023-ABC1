@@ -8,7 +8,7 @@ A brief and visual overview of our proposal is attached in the [Visual read me P
 
 ## Authors
 * Roberto Gutierrez Beraldo¹* - roberto.gutierrez@ufabc.edu.br
-* Leonardo Ferreira Alves¹ - leonardo.alves@ufabc.edu.br
+* Leonardo Alves Ferreira¹ - leonardo.alves@ufabc.edu.br
 * Fernando Silva de Moura² - fernando.moura@ufabc.edu.br
 * André Kazuo Takahata¹ - andre.t@ufabc.edu.br
 * Ricardo Suyama¹ - ricardo.suyama@ufabc.edu.br
