@@ -8,7 +8,7 @@ main('TrainingData', 'Output', 7);
 
 
 
-%% Reconstructions assessment, for test purpose only
+%% Reconstructions assessment, for testing purposes only
 
 % score = 0;
 % initial_file = 1;
