@@ -38,6 +38,8 @@ In relation to the external codes and toolboxes:
 * We used the function importKerasLayers from the Deep Learning Toolbox Converter for TensorFlow Models (V.23.1.0).
     * It is necessary to download and install it from https://www.mathworks.com/matlabcentral/fileexchange/64649-deep-learning-toolbox-converter-for-tensorflow-models
     * More info at: https://www.mathworks.com/help/deeplearning/ref/importkeraslayers.html
+    * When importing the CNN, Matlab shows the following warning, but imports the CNN nevertheless:
+        * Warning: File 'ultimate_cnn1.h5' was saved in Keras version '2.11.0'. Import of Keras versions newer than '2.6.0' has not been thoroughly tested yet. The imported model might not exactly match the model saved in the Keras file.
     * Note that a new function importNetworkFromTensorFlow is available since Matlab R2023b, but we did not use it.
 * We based our implementation of the soft thresholding in the following function from the UNLocBoX toolbox:
     * https://epfl-lts2.github.io/unlocbox-html/doc/utils/soft_threshold_code.html
