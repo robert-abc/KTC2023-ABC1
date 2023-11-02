@@ -2,9 +2,9 @@
 
 ## Brief description of our algorithm in the context of Kuopio Tomography Challenge 2023 (KTC2023) [[1]](#1)
 
-Our algorithm is based on the smoothness prior provided by the KTC2023 organising committee [[2]](#2). We modified it to include post-processing steps, including one with a CNN, to extract meaninful information and to segment the resuts. This is our first submission to the KTC2023.
+Our algorithm is based on the smoothness prior provided by the KTC2023 organising committee [[2]](#2). We modified it to include post-processing steps, including one with a CNN, to extract meaningful information and to segment the results. This is our first submission to the KTC2023.
 
-A brief and visual overview of our proposal is attached in the [Visual read me PDF](visual_readme.pdf). It also includes examples of reconstructions using data from the traning set. 
+A brief and visual overview of our proposal is attached in the [Visual read me PDF](visual_readme.pdf). It also includes examples of reconstructions using data from the training set. 
 
 ## Authors
 * Roberto Gutierrez Beraldo¹* - roberto.gutierrez@ufabc.edu.br
@@ -26,7 +26,7 @@ A brief and visual overview of our proposal is attached in the [Visual read me P
 * Most files are similar or identical to the original KTC codes. The differences are:
     * We added the CNN file ("ultimate_cnn1.h5")
     * We modified main.m to include the post-processing steps
-* We trained the CNN using Tensorflow/keras in Google Colaboratory (Colab). We did not include the python file, the code to generate the traning pairs, or the training pairs themselves here. Please, contact us if you need further information other the [Visual read me](visual_readme.pdf).
+* We trained the CNN using Tensorflow/keras in Google Colaboratory (Colab). We did not include the Python file, the code to generate the training pairs or the training pairs themselves here. Please, contact us if you need further information.
 
 | Package | Version |
 | ------------- | ------------- |
@@ -34,14 +34,14 @@ A brief and visual overview of our proposal is attached in the [Visual read me P
 | Deep Learning Toolbox | 14.6 | 
 | Image Processing Toolbox | 11.7 | 
 
-In relation to the external codes and toolboxes: 
+Regarding the external codes and toolboxes: 
 * We used the function importKerasLayers from the Deep Learning Toolbox Converter for TensorFlow Models (V.23.1.0).
     * It is necessary to download and install it from https://www.mathworks.com/matlabcentral/fileexchange/64649-deep-learning-toolbox-converter-for-tensorflow-models
     * More info at: https://www.mathworks.com/help/deeplearning/ref/importkeraslayers.html
     * When importing the CNN, Matlab shows the following warning, but imports the CNN nevertheless:
         * Warning: File 'ultimate_cnn1.h5' was saved in Keras version '2.11.0'. Import of Keras versions newer than '2.6.0' has not been thoroughly tested yet. The imported model might not exactly match the model saved in the Keras file.
-    * Note that a new function importNetworkFromTensorFlow is available since Matlab R2023b, but we did not use it.
-* We based our implementation of the soft thresholding in the following function from the UNLocBoX toolbox:
+    * Note that a new function importNetworkFromTensorFlow has been available since Matlab R2023b, but we did not use it.
+* We based our implementation of the soft thresholding on the following function from the UNLocBoX toolbox:
     * https://epfl-lts2.github.io/unlocbox-html/doc/utils/soft_threshold_code.html
     * In this case, there's no need to download this toolbox or this function
 
