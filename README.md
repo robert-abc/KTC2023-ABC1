@@ -62,6 +62,9 @@ To run the code:
 * Run the Proposal_function.m, which calls the main.m, using the three arguments from above appropriately.
 * Run the scoring function
     * Although the scoringFunction.m is included in the folder, we do not evaluate the scores for each output. This part of the code is given as comments in the main.m function.
+* Note that, inside main.m, there is the parameter PAUSE_FOR_EACH_TARGET:
+  * If 1, we plot images from all steps (default).
+  * If 0, there is no plot. 
 
 ## References
 
