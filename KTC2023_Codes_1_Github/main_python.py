@@ -22,10 +22,12 @@ args = parser.parse_args()
 # Get image names
 img_names = sorted(os.listdir(args.input_path))
 r = re.compile(".*\.mat")
-img_names = list(filter(r.match,img_names))
+r2 = re.compile("^(?!ref)")
+img_names = list(filter(r.match, img_names))
+img_names = list(filter(r2.match, img_names))
 print(f"{len(img_names)} images were found.")
 
-sparse_mesh = sp.io.loadmat('Mesh_sparse.mat')
+sparse_mesh = sp.io.loadmat('PythonCodes/Mesh_sparse.mat')
 cnn = tf.keras.models.load_model('ultimate_cnn1.h5')
 ref_data = sp.io.loadmat('TrainingData/ref.mat')
 

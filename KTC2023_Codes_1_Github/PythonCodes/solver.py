@@ -2,11 +2,11 @@ import numpy as np
 import scipy as sp
 import cv2
 import skimage.morphology as skm
-import KTCMeshing
-import KTCRegularization
-import KTCFwd
-import KTCAux
-import KTCScoring
+from PythonCodes import KTCMeshing
+from PythonCodes import KTCRegularization
+from PythonCodes import KTCFwd
+from PythonCodes import KTCAux
+from PythonCodes import KTCScoring
 
 def reconstruct(input_path, categoryNbr, cnn, sparse_mesh, ref_data, dic_parameters=None):
   if dic_parameters is None:
@@ -20,16 +20,16 @@ def reconstruct(input_path, categoryNbr, cnn, sparse_mesh, ref_data, dic_paramet
     cnn_scale = dic_parameters['cnn_scale']
     morphOpen_radius = dic_parameters['morphOpen_radius']
 
-    input_mat = sp.io.loadmat(input_path)
-  
-    deltareco_pixgrid_smooth = smooth_prior_reconstruction(input_mat, categoryNbr, sparse_mesh, ref_data, smooth_lambda)
-    deltareco_pixgrid_soft = soft_thresholding(deltareco_pixgrid_smooth, softThersh_perc)
-    deltareco_pixgrid_cnn = cnn_inference(deltareco_pixgrid_soft, cnn, cnn_scale)
-    deltareco_pixgrid_preseg = pre_segmentation(deltareco_pixgrid_cnn)
-    deltareco_pixgrid_mopen = morphological_filtering(deltareco_pixgrid_preseg, morphOpen_radius)
-    deltareco_pixgrid_otsu = otsu_segmentation(deltareco_pixgrid_mopen)
+  input_mat = sp.io.loadmat(input_path)
 
-    return deltareco_pixgrid_otsu
+  deltareco_pixgrid_smooth = smooth_prior_reconstruction(input_mat, categoryNbr, sparse_mesh, ref_data, smooth_lambda)
+  deltareco_pixgrid_soft = soft_thresholding(deltareco_pixgrid_smooth, softThersh_perc)
+  deltareco_pixgrid_cnn = cnn_inference(deltareco_pixgrid_soft, cnn, cnn_scale)
+  deltareco_pixgrid_preseg = pre_segmentation(deltareco_pixgrid_cnn)
+  deltareco_pixgrid_mopen = morphological_filtering(deltareco_pixgrid_preseg, morphOpen_radius)
+  deltareco_pixgrid_otsu = otsu_segmentation(deltareco_pixgrid_mopen)
+  
+  return deltareco_pixgrid_otsu
 
 def smooth_prior_reconstruction(mat_dict2, categoryNbr, sparse_mesh, ref_data, lambd=20):
   Nel = 32  # number of electrodes

@@ -1,6 +1,6 @@
 import numpy as np
 import scipy as sp
-from KTCMeshing import ELEMENT
+from PythonCodes.KTCMeshing import ELEMENT
 
 class CMATRIX:# Compact presentation of a very sparse matrix
     def __init__(self, mat, indi, indj=None):

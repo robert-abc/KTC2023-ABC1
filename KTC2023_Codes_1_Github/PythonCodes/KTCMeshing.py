@@ -1,6 +1,6 @@
 import numpy as np
 import os
-import KTCcircmesh 
+from PythonCodes import KTCcircmesh 
 import matplotlib.pyplot as plt
 from scipy.spatial import Delaunay
 #   The function create2Dmesh_circ can be used as a basis to make your meshing codes using Gmsh.
