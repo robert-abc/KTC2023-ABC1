@@ -10,10 +10,10 @@ from PythonCodes import KTCScoring
 
 def reconstruct(input_path, categoryNbr, cnn, sparse_mesh, ref_data, dic_parameters=None):
   if dic_parameters is None:
-    smooth_lambda = 20
-    softThersh_perc = 0.14
-    cnn_scale = 2.5
-    morphOpen_radius = 12
+    smooth_lambda = 63.31
+    softThersh_perc = 0.271
+    cnn_scale = 2.82
+    morphOpen_radius = 10
   else:
     smooth_lambda = dic_parameters['smooth_lambda']
     softThersh_perc = dic_parameters['softThersh_perc']
