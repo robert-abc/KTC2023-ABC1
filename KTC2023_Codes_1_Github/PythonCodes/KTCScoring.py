@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.signal as sps
+from skimage.metrics import structural_similarity
 
 def Otsu(image, nvals, figno):
     # binary Otsu's method for finding the segmentation level for sigma
@@ -91,6 +92,40 @@ def scoringFunction(groundtruth, reconstruction):
     reco_d[np.abs(reconstruction - 1) < 0.1] = 1
 
     score_d = ssim(truth_d, reco_d)
+
+    score = 0.5*(score_c + score_d)
+
+    return score
+
+def scoringFunction_faster(groundtruth, reconstruction):
+    """
+    Alteration made to the function provided by the KTC2023 organizers to make the
+    calculation of the score faster.
+
+    This function substitutes the SSIM function by a implementation from the skimage.
+
+    The radius used in the gaussian filter is smaller because using the same radius
+    of the KTC2023's function raises an error of the skimage.
+    """
+    if (np.any(groundtruth.shape != np.array([256, 256]))):
+        raise Exception('The shape of the given ground truth is not 256 x 256!')
+    
+    if (np.any(reconstruction.shape != np.array([256, 256]))):
+        return 0
+    
+    truth_c = np.zeros(groundtruth.shape)
+    truth_c[np.abs(groundtruth - 2) < 0.1] = 1
+    reco_c = np.zeros(reconstruction.shape)
+    reco_c[np.abs(reconstruction - 2) < 0.1] = 1
+
+    score_c = structural_similarity(truth_c, reco_c, gaussian_weights=True, sigma=35)
+
+    truth_d = np.zeros(groundtruth.shape)
+    truth_d[np.abs(groundtruth - 1) < 0.1] = 1
+    reco_d = np.zeros(reconstruction.shape)
+    reco_d[np.abs(reconstruction - 1) < 0.1] = 1
+
+    score_d = structural_similarity(truth_d, reco_d, gaussian_weights=True, sigma=35)
 
     score = 0.5*(score_c + score_d)
 
