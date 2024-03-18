@@ -66,6 +66,12 @@ To run the code:
   * If 1, we plot images from all steps (default).
   * If 0, there is no plot. 
 
+### Python version
+
+In addition to the Matlab files, we have also added a Python version of the proposal. This version can be run through the file [*main_python.py*](https://github.com/robert-abc/KTC2023-ABC1/blob/main/KTC2023_Codes_1_Github/main_python.py) using the same structure of three input arguments explained above. An example of how to run this versoin is available in the jupyter notebook [*example_python_reconstruction.ipynb*](https://github.com/robert-abc/KTC2023-ABC1/blob/main/KTC2023_Codes_1_Github/example_python_reconstruction.ipynb).
+
+As an improvement to the proposal, we used the [Optuna framework](https://optuna.readthedocs.io/en/stable/index.html) to implement an automatic hyperparameter optimization to find the best values for some of the hyperparameters used in the proposal. The code to execute the optimization is available at the file [*hyperparameter_optimization.py*](https://github.com/robert-abc/KTC2023-ABC1/blob/main/KTC2023_Codes_1_Github/hyperparameter_optimization.py), and an example of it being run is available at the jupyter notebook [*example_hyperparameter_optimization.ipynb*](https://github.com/robert-abc/KTC2023-ABC1/blob/main/KTC2023_Codes_1_Github/example_hyperparameter_optimization.ipynb).
+
 ## References
 
 <a id="1">[1]</a> 
