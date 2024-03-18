@@ -40,7 +40,7 @@ class Objective:
                 file_score = KTCScoring.scoringFunction_faster(self.gts[fn], reconstruction)
                 score_list.append(file_score)
 
-                trial.report(file_score, fn*ilvl + fn)
+                trial.report(file_score, fn*(ilvl-1) + fn)
 
                 if trial.should_prune():
                     raise optuna.TrialPruned()
