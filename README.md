@@ -5,7 +5,7 @@
 Our algorithm is based on the smoothness prior provided by the KTC2023 organising committee [[2]](#2). We modified it to include post-processing steps, including one with a CNN, to remove artifacts from electrode disconnection and to segment the results. The official KTC2023 results are available [here](https://www.fips.fi/KTCresults.php)
 
 A brief and visual overview of our proposal is attached in the [Visual read me PDF](visual_readme.pdf). It also includes examples of reconstructions using data from the training set. 
-Here, we include two codes: Original proposal submitted to the challenge (Matlab) and the proposal using hyperparameter optimization (Python). Each subfolder includes installation and usage instructions.
+Here, we include two codes: The original proposal submitted to the challenge (Matlab) and the proposal using hyperparameter optimization (Python). Each subfolder includes installation and usage instructions.
 
 ## Authors
 * Roberto Gutierrez Beraldo¹* - roberto.gutierrez@ufabc.edu.br
