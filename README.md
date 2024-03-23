@@ -2,7 +2,7 @@
 
 ## Brief description of our algorithm in the context of Kuopio Tomography Challenge 2023 (KTC2023) [[1]](#1)
 
-Our algorithm is based on the smoothness prior provided by the KTC2023 organising committee [[2]](#2). We modified it to include post-processing steps, including one with a convolutional neural network (CNN), to remove artifacts from electrode disconnection and to segment the results. The official KTC2023 results are available [here](https://www.fips.fi/KTCresults.php)
+We baed our algorithm the smoothness prior provided by the KTC2023 organising committee [[2]](#2). We modified it to include post-processing steps, including one with a convolutional neural network (CNN), to remove artifacts from electrode disconnection and to segment the results. The official KTC2023 results are available [here](https://www.fips.fi/KTCresults.php)
 
 A brief and visual overview of our proposal is attached in the [Visual read me PDF](visual_readme.pdf). It also includes examples of reconstructions using data from the training set. 
 Here, we include two codes: The original proposal submitted to the challenge (Matlab) and the proposal using hyperparameter optimization (Python). Each subfolder includes installation and usage instructions. We also included the weights of the CNN after the training.
