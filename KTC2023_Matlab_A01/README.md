@@ -1,5 +1,7 @@
 # Proposed method installation and usage instructions (MATLAB)
 
+A brief and visual overview of our proposal is attached in the [Visual read me PDF](visual_readme.pdf). It also includes examples of reconstructions using data from the training set.
+
 ## Method installation and requirements
 * The Matlab files available in this subfolder.
 * Most files are similar or identical to the original KTC codes. The differences are:
