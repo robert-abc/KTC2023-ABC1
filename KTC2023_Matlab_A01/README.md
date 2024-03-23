@@ -1,11 +1,10 @@
 # Proposed method installation and usage instructions (MATLAB)
 
 ## Method installation and requirements
-* The Matlab files available in this repository, see /KTC2023_Codes_1_Github folder.
+* The Matlab files available in this subfolder.
 * Most files are similar or identical to the original KTC codes. The differences are:
     * We added the CNN file ("ultimate_cnn1.h5")
     * We modified main.m to include the post-processing steps
-* We trained the CNN using Tensorflow/keras in Google Colaboratory (Colab). We did not include the Python file, the code to generate the training pairs or the training pairs themselves here. Please, contact us if you need further information.
 
 | Package | Version |
 | ------------- | ------------- |
