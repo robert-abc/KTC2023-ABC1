@@ -6,7 +6,8 @@ We based our algorithm the smoothness prior provided by the KTC2023 organising c
 
 Here, we include two codes: The original proposal submitted to the challenge (Matlab) and the proposal using hyperparameter optimization (Python). Each subfolder includes installation and usage instructions. We also included the weights of the CNN after the training.
 
-We used Google Colaboratory (Colab) to train the CNN. The training set and the Python code for the network architecture and optimization are available at Zenodo [here](doi).
+We used Google Colaboratory (Colab) to train the CNN. The training set and the Python code for the network architecture and optimization are available at Zenodo [here](https://zenodo.org/records/10801591) (DOI: 10.5281/zenodo.10801591)
+
 Please, contact us if you need further information. 
 
 ## Authors
